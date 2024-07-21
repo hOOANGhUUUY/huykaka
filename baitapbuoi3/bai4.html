@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information</title>
+</head>
+<body>
+
+<script>
+    var student = new Object();
+
+    student.hoTen = prompt("Nhập họ và tên của sinh viên:");
+    student.diem = parseFloat(prompt("Nhập điểm trung bình của sinh viên:"));
+
+    student.hienThi = function() {
+        if (this.diem >= 5) {
+            this.hocLuc = "Đậu";
+        } else {
+            this.hocLuc = "Rớt";
+        }
+
+        document.write("<h3>Họ và tên: " + this.hoTen + "</h3>");
+        document.write("<h3>Điểm TB: " + this.diem + "</h3>");
+        document.write("<h3>Học lực: " + this.hocLuc + "</h3>");
+    };  
+
+    document.write("<button onclick='student.hienThi();'>Hiển thị thông tin sinh viên</button>");
+</script>
+
+</body>
+</html>
